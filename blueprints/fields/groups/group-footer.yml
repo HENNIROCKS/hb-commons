@@ -1,0 +1,7 @@
+label: Footer
+
+type: group
+
+fields:
+  footertext: fields/writers/writer-footertext
+  # patterns: fields/objects/object-patterns

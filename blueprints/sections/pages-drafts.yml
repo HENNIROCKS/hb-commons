@@ -1,0 +1,11 @@
+label: Entwürfe
+
+type: pages
+
+# info: "{{ page.children.count }}"
+
+status: draft
+
+limit: 10
+
+create: default

@@ -1,0 +1,11 @@
+title: Portfolio-Seite
+
+extends: layouts/default
+
+tabs:
+  content:
+    columns:
+      right:
+        fields:
+          tags: fields/tags/tags-tags
+          previewimage: fields/files/files-previewimage

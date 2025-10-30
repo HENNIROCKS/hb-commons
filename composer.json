@@ -1,0 +1,19 @@
+{
+  "name": "hennirocks/hb-commons",
+  "description": "Everything that my Kirby projects have in common",
+  "license": "MIT",
+  "type": "kirby-plugin",
+  "version": "0.1",
+  "homepage": "https://github.com/HENNIROCKS",
+  "authors": [
+    {
+      "name": "Hendrik Berends",
+      "email": "43246523+HENNIROCKS@users.noreply.github.com"
+    }
+  ],
+  "require": {},
+  "autoload-dev": {},
+  "extra": {},
+  "scripts": {},
+  "config": {}
+}

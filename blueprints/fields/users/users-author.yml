@@ -1,0 +1,5 @@
+label: Autor
+
+type: users
+
+default: admin@website.hennirocks.de

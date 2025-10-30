@@ -1,0 +1,7 @@
+label: Vorschaubild
+
+type: files
+
+multiple: false
+
+query: page.images

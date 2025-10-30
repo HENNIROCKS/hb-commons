@@ -1,0 +1,14 @@
+title: Blogbeitrag
+
+extends: layouts/default
+
+tabs:
+  content:
+    columns:
+      right:
+        fields:
+          date: fields/dates/date-date
+          short: fields/toggles/toggle-short
+          author: fields/users/users-author
+          tags: fields/tags/tags-tags
+          previewimage: fields/files/files-previewimage
