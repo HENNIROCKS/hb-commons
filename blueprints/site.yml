@@ -17,6 +17,7 @@ tabs:
     label: Footer
     fields:
       footer: fields/groups/group-footer
+      hiddenmessage: fields/textareas/textarea-hiddenmessage
 
   links:
     label: Links
