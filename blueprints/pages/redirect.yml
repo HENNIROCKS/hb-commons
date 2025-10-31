@@ -1,0 +1,8 @@
+title: Weiterleitung
+
+icon: share-forward
+
+fields:
+  redirect:
+    type: pages
+    multiple: false

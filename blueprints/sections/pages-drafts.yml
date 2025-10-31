@@ -8,4 +8,6 @@ status: draft
 
 limit: 10
 
-create: default
+create:
+  - default
+  - redirect
