@@ -18,6 +18,7 @@ tabs:
     fields:
       footer: fields/groups/group-footer
       hiddenmessage: fields/textareas/textarea-hiddenmessage
+      stoerer: fields/writers/writer-stoerer
 
   links:
     label: Links

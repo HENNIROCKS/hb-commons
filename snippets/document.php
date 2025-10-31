@@ -29,6 +29,8 @@ $theme = option('activeTheme');
 
     <?= $slot ?>
 
+    <?php snippet('stoerer') ?>
+
     <?php snippet('footer', ['theme' => $theme]) ?>
 
 </body>
