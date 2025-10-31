@@ -3,6 +3,4 @@ title: Weiterleitung
 icon: share-forward
 
 fields:
-  redirect:
-    type: pages
-    multiple: false
+  redirect: fields/pages/pages-redirect
