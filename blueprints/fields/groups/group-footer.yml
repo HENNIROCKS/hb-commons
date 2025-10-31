@@ -4,4 +4,8 @@ type: group
 
 fields:
   footertext: fields/writers/writer-footertext
+  footermenu:
+    extends: fields/pages/pages-pages
+    query: site.children.published.not("home", "error")
+
   # patterns: fields/objects/object-patterns

@@ -17,6 +17,8 @@ $text = $site->footertext()->or('Made with Kirby and <i class="icon icon__heart"
         <?= $text->kt() ?>
     </div>
 
+    <?php snippet('navigation-footer') ?>
+
 </footer>
 
 <?= js([

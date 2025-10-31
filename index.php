@@ -100,12 +100,13 @@ $mapFiles = function (string $subdir, array $exts): array {
 Kirby::plugin('hennirocks/hb-commons', [
     'blueprints' => $mapFiles('blueprints', ['yml', 'yaml']),
     'collections' => [
-        'blog-articles'   => require 'collections/blog-articles.php',
-        'links'           => require 'collections/links.php',
-        'pages-legal'     => require 'collections/pages-legal.php',
-        'pages-listed'    => require 'collections/pages-listed.php',
-        'pages-published' => require 'collections/pages-published.php',
-        'portfolio-pages' => require 'collections/portfolio-pages.php',
+        'blog-articles'    => require 'collections/blog-articles.php',
+        'links'            => require 'collections/links.php',
+        'pages-footermenu' => require 'collections/pages-footermenu.php',
+        'pages-legal'      => require 'collections/pages-legal.php',
+        'pages-listed'     => require 'collections/pages-listed.php',
+        'pages-published'  => require 'collections/pages-published.php',
+        'portfolio-pages'  => require 'collections/portfolio-pages.php',
     ],
     'controllers' => [
         'blog.json'      => require 'controllers/blog.json.php',
