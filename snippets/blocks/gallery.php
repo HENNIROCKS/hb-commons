@@ -64,11 +64,11 @@ $variant = $block->variant();
 				<?= $image ?>
 			<?php endforeach ?>
 		</div>
-		<?php /* if ($caption->isNotEmpty()): ?>
-		<div class="gallery__caption">
-			<?= $caption ?>
-		</div>
-		<?php endif */ ?>
+		<?php if ($caption->isNotEmpty()): ?>
+			<div class="gallery__caption">
+				<?= $caption ?>
+			</div>
+		<?php endif ?>
 	</div>
 
 <?php else: ?>
@@ -76,5 +76,10 @@ $variant = $block->variant();
 		<?php foreach ($block->images()->toFiles() as $image): ?>
 			<?= $image ?>
 		<?php endforeach ?>
+		<?php if ($caption->isNotEmpty()): ?>
+			<div class="gallery__caption">
+				<?= $caption ?>
+			</div>
+		<?php endif ?>
 	</div>
 <?php endif ?>
