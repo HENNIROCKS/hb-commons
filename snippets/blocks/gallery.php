@@ -17,43 +17,35 @@ $variant = $block->variant();
 <?php if ($variant == '2col-masonry'): ?>
 	<div class="gallery gallery--masonry">
 		<?php
-		$oddImages = [];
-		$evenImages = [];
+		$columns = [[], []];
 		$counter = 0;
 		foreach ($block->images()->toFiles() as $image) {
-			if ($counter % 2 === 0) {
-				$oddImages[] = $image;
-			} else {
-				$evenImages[] = $image;
-			}
+			$columns[$counter % 2][] = $image;
 			$counter++;
 		}
 		?>
-		<div class="gallery__column">
-			<?php foreach ($oddImages as $image): ?>
-				<?= $image ?>
-			<?php endforeach ?>
-		</div>
-		<div class="gallery__column">
-			<?php foreach ($evenImages as $image): ?>
-				<?= $image ?>
-			<?php endforeach ?>
-		</div>
+		<?php foreach ($columns as $column): ?>
+			<div class="gallery__column">
+				<?php foreach ($column as $image): ?>
+					<?= $image ?>
+				<?php endforeach ?>
+			</div>
+		<?php endforeach ?>
 	</div>
 
 <?php elseif ($variant == '3col-masonry'): ?>
 	<div class="gallery gallery--masonry">
 		<?php
-		$cols = [[], [], []];
+		$columns = [[], [], []];
 		$counter = 0;
 		foreach ($block->images()->toFiles() as $image) {
-			$cols[$counter % 3][] = $image;
+			$columns[$counter % 3][] = $image;
 			$counter++;
 		}
 		?>
-		<?php foreach ($cols as $col): ?>
+		<?php foreach ($columns as $column): ?>
 			<div class="gallery__column">
-				<?php foreach ($col as $image): ?>
+				<?php foreach ($column as $image): ?>
 					<?= $image ?>
 				<?php endforeach ?>
 			</div>
@@ -76,7 +68,7 @@ $variant = $block->variant();
 		<div class="gallery__caption">
 			<?= $caption ?>
 		</div>
-	<?php endif */ ?>
+		<?php endif */ ?>
 	</div>
 
 <?php else: ?>
