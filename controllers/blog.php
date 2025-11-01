@@ -7,12 +7,13 @@
 
 return function ($page) {
 
-    $limit    = 4;
-    $articles = collection('blog-articles')->paginate($limit);
+    // $limit    = 4;
+    // $articles = collection('blog-articles')->paginate($limit);
+    $articles = collection('blog-articles');
 
     return [
-        'limit'      => $limit,
+        // 'limit'      => $limit,
         'articles'   => $articles,
-        'pagination' => $articles->pagination(),
+        // 'pagination' => $articles->pagination(),
     ];
 };
