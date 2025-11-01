@@ -20,10 +20,3 @@ $text = $site->footertext()->or('Made with Kirby and <i class="icon icon__heart"
     <?php snippet('navigation-footer') ?>
 
 </footer>
-
-<?= js([
-    // 'assets/js/scripts.js',
-    // '@auto'
-    'media/plugins/' . $theme . '/js/scripts.js',
-    'media/plugins/' . $theme . '/js/templates/' . $page->template()  . '.js',
-]) ?>
