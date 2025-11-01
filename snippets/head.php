@@ -28,7 +28,7 @@ $robots      = $page->robots();
 <meta name="robots" content="<?php e($robots->toBool() === true, 'noindex, nofollow', 'index, follow') ?>">
 
 <?= css([
-  'media/plugins/' . $theme . '/css/styles.css',
+  'media/plugins/' . $theme . '/css/style.min.css',
   // 'media/plugins/' . $theme . '/css/templates/' . $page->template()  . '.css',
 ]) ?>
 

@@ -34,7 +34,7 @@ $theme = option('activeTheme');
     <?php snippet('footer', ['theme' => $theme]) ?>
 
     <?= js([
-        'media/plugins/' . $theme . '/js/scripts.js',
+        // 'media/plugins/' . $theme . '/js/scripts.js',
         // 'media/plugins/' . $theme . '/js/templates/' . $page->template()  . '.js',
     ]) ?>
 
