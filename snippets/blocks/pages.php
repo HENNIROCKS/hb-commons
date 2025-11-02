@@ -26,5 +26,9 @@ $theme = option('activeTheme');
             </article>
         <?php endforeach ?>
 
+        <?php if ($block->pages()->toPages()->count() == 1): ?>
+            <div class="pages__article--placeholder"></div>
+        <?php endif ?>
+
     </div>
 </div>
