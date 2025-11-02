@@ -9,6 +9,10 @@ tabs:
       right:
         width: 1/3
         sections:
+          fields:
+            type: fields
+            fields:
+              previewimage: fields/files/files-previewimage
           published: sections/pages-published
           drafts: sections/pages-drafts
 
