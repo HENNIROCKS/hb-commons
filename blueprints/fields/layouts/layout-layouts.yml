@@ -27,6 +27,7 @@ fieldsets:
       - image
       - gallery
       - video
+      - randomimage
   links:
     label: Links
     type: group
