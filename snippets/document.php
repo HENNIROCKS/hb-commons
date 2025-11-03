@@ -1,5 +1,3 @@
-<?= $site->hiddenmessage() ?>
-
 <?php
 
 /**
