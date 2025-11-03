@@ -4,7 +4,22 @@
  * @var \Kirby\Cms\Block $block
  */
 
-$theme = option('activeTheme');
+// shared options (without the image)
+$baseOptions = [
+    'imgAttributes' => [
+        'shared' => [
+            'class' => 'pages__image',
+            'decoding' => 'async',
+        ],
+    ],
+    'srcsetName' => 'previewimage',
+    'critical' => false,
+];
+
+// helper to build the full options for a given image
+$makeOptions = function ($image) use ($baseOptions) {
+    return array_merge(['image' => $image], $baseOptions);
+};
 
 ?>
 
@@ -16,7 +31,7 @@ $theme = option('activeTheme');
                 <a class="pages__link" href="<?= $article->url() ?>" title="Zur Seite <?= $article->title() ?>"></a>
 
                 <?php if ($image = $article->previewimage()->toFile() ?? $article->images()->first()): ?>
-                    <img alt="" class="pages__image" src="<?= $image->crop(640, 250, 80)->url() ?>" />
+                    <?php snippet('imagex-picture', $makeOptions($image)) ?>
                 <?php endif ?>
 
                 <span class="pages__title">

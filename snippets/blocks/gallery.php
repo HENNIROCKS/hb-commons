@@ -12,6 +12,23 @@ $ratio   = $block->ratio()->or('auto');
 
 $variant = $block->variant();
 
+// shared options (without the image)
+$baseOptions = [
+	'imgAttributes' => [
+		'shared' => [
+			'alt' => $block->alt()->esc(),
+			'decoding' => 'async',
+		],
+	],
+	'srcsetName' => 'default',
+	'critical' => false,
+];
+
+// helper to build the full options for a given image
+$makeOptions = function ($image) use ($baseOptions) {
+	return array_merge(['image' => $image], $baseOptions);
+};
+
 ?>
 
 <?php if ($variant == '2col-masonry'): ?>
@@ -27,7 +44,7 @@ $variant = $block->variant();
 		<?php foreach ($columns as $column): ?>
 			<div class="gallery__column">
 				<?php foreach ($column as $image): ?>
-					<?= $image ?>
+					<?php snippet('imagex-picture', $makeOptions($image)) ?>
 				<?php endforeach ?>
 			</div>
 		<?php endforeach ?>
@@ -46,7 +63,7 @@ $variant = $block->variant();
 		<?php foreach ($columns as $column): ?>
 			<div class="gallery__column">
 				<?php foreach ($column as $image): ?>
-					<?= $image ?>
+					<?php snippet('imagex-picture', $makeOptions($image)) ?>
 				<?php endforeach ?>
 			</div>
 		<?php endforeach ?>
@@ -61,7 +78,7 @@ $variant = $block->variant();
 		</span>
 		<div class="gallery__container">
 			<?php foreach ($block->images()->toFiles() as $image): ?>
-				<?= $image ?>
+				<?php snippet('imagex-picture', $makeOptions($image)) ?>
 			<?php endforeach ?>
 		</div>
 		<?php if ($caption->isNotEmpty()): ?>
@@ -74,7 +91,7 @@ $variant = $block->variant();
 <?php else: ?>
 	<div class="gallery gallery--none">
 		<?php foreach ($block->images()->toFiles() as $image): ?>
-			<?= $image ?>
+			<?php snippet('imagex-picture', $makeOptions($image)) ?>
 		<?php endforeach ?>
 		<?php if ($caption->isNotEmpty()): ?>
 			<div class="gallery__caption">

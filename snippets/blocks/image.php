@@ -17,9 +17,22 @@ $src     = null;
 if ($block->location() == 'web') {
     $src = $block->src()->esc();
 } elseif ($image = $block->image()->toFile()) {
-    $alt = $alt->or($image->alt());
-    $src = $image->url();
+    $alt    = $alt->or($image->alt());
+    $src    = $image->url();
+    $srcset = $image->srcset('default');
 }
+
+$options = [
+    'image' => $block->image()->toFile(),
+    'imgAttributes' => [
+        'shared' => [
+            'alt' => $block->alt()->esc(),
+            'decoding' => 'async',
+        ],
+    ],
+    'srcsetName' => 'default',
+    'critical' => false,
+];
 
 ?>
 
@@ -28,10 +41,10 @@ if ($block->location() == 'web') {
 
         <?php if ($link->isNotEmpty()): ?>
             <a class="image__link" href="<?= Str::esc($link->toUrl()) ?>">
-                <img alt="<?= $alt->esc() ?>" src="<?= $src ?>">
+                <?php snippet('imagex-picture', $options) ?>
             </a>
         <?php else: ?>
-            <img alt="<?= $alt->esc() ?>" src="<?= $src ?>">
+            <?php snippet('imagex-picture', $options) ?>
         <?php endif ?>
 
         <?php if ($caption->isNotEmpty()): ?>
