@@ -14,7 +14,7 @@ $files = $block->files()->toFiles();
             <thead class="table__head">
                 <tr class="table__row">
                     <th class="table__column">Datei</th>
-                    <th class="table__column table__column--center">Download</th>
+                    <th class="table__column">Download</th>
                 </tr>
             </thead>
             <tbody class="table__body">
