@@ -114,7 +114,27 @@ Kirby::plugin('hennirocks/hb-commons', [
         'portfolio.json' => require 'controllers/portfolio.json.php',
         'portfolio'      => require 'controllers/portfolio.php',
     ],
-    'hooks' => [],
+    'hooks' => [
+        'kirbytext:after' => function ($text) {
+            $search = [
+                '<table>',
+                '<thead>',
+                '<th>',
+                '<tbody>',
+                '<tr>',
+                '<td>',
+            ];
+            $replace = [
+                '<table class="table">',
+                '<thead class="table__head">',
+                '<th class="table__column">',
+                '<tbody class="table__body">',
+                '<tr class="table__row">',
+                '<td class="table__column">',
+            ];
+            return str_replace($search, $replace, $text);
+        }
+    ],
     'icons' => [
         // https://getkirby.com/docs/reference/plugins/extensions/icons
     ],
