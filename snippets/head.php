@@ -8,7 +8,7 @@
 $title       = $site->custom_title()->or($page->custom_title());
 $author      = $site->author()->or('Hendrik Berends');
 $description = $page->description()->or($site->description());
-$keywords    = null;
+$keywords    = $page->keywords()->or($site->keywords());
 $robots      = $page->robots();
 
 ?>
