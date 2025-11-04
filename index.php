@@ -109,10 +109,8 @@ Kirby::plugin('hennirocks/hb-commons', [
         'portfolio-pages'  => require 'collections/portfolio-pages.php',
     ],
     'controllers' => [
-        'blog.json'      => require 'controllers/blog.json.php',
-        'blog'           => require 'controllers/blog.php',
-        'portfolio.json' => require 'controllers/portfolio.json.php',
-        'portfolio'      => require 'controllers/portfolio.php',
+        'blog.json' => require 'controllers/blog.json.php',
+        'blog'      => require 'controllers/blog.php',
     ],
     'hooks' => [],
     'icons' => [

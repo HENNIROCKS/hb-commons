@@ -13,13 +13,15 @@ tabs:
         sections:
           published:
             extends: sections/pages-published
+            sortBy: date desc
+            info: "{{ page.date.toDate('d. MMMM YYYY') }}"
       right:
         width: 1/3
         sections:
           drafts:
             extends: sections/pages-drafts
-            create:
-              - blog-article
+            create: blog-article
+            sortBy: date desc
 
   files:
     label: Dateien
