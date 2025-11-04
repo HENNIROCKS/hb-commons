@@ -7,29 +7,12 @@
 
 return function ($page) {
 
-    // // $limit    = 4;
-    // // $articles = collection('blog-articles')->paginate($limit);
-    // $articles = collection('blog-articles');
+    $limit    = 3;
+    $articles = collection('blog-articles')->paginate($limit);
 
-    // return [
-    //     // 'limit'      => $limit,
-    //     'articles'   => $articles,
-    //     // 'pagination' => $articles->pagination(),
-    // ];
-
-
-    $articles = collection('blog-articles');
-
-    $tags = $articles->pluck('tags', ',', true);
-
-    sort($tags);
-
-    if ($tag = param('tag')) {
-        $articles = $articles->filterBy('tags', $tag, ',');
-    }
-
-    $articles   = $articles->paginate(8);
-    $pagination = $articles->pagination();
-
-    return compact('articles', 'tags', 'tag', 'pagination');
+    return [
+        'limit'      => $limit,
+        'articles'   => $articles,
+        'pagination' => $articles->pagination(),
+    ];
 };
