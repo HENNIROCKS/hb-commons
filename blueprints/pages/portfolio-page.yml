@@ -7,5 +7,5 @@ tabs:
     columns:
       right:
         fields:
-          tags: fields/tags/tags-tags
           previewimage: fields/files/files-previewimage
+          tags: fields/tags/tags-tags
