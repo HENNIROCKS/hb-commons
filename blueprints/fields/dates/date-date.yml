@@ -1,3 +1,5 @@
 label: Datum
 
 type: date
+
+default: today
