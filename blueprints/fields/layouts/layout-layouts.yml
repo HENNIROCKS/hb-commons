@@ -44,6 +44,6 @@ fieldsets:
   code:
     label: Code
     type: group
-    open: false
     fieldsets:
       - markdown
+      - code
