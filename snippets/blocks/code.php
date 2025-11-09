@@ -6,8 +6,4 @@
 
 ?>
 
-<pre class="code">
-    <code class="code__language code__language--<?= $block->language()->or('text') ?>">
-        <?= $block->code()->html(false) ?>
-    </code>
-</pre>
+<pre class="code"><code class="code__language code__language--<?= $block->language()->or('text') ?>"><?= $block->code()->html(false) ?></code></pre>
