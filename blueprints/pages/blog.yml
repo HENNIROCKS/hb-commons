@@ -9,9 +9,17 @@ tabs:
     label: Inhalt & Artikel
     columns:
       top:
-        width: 2/3
         fields:
-          text: fields/writers/writer-text
+          # TODO: Properly add fields
+          text:
+            type: writer
+            width: 1/2
+          pinned:
+            label: Angepinnt
+            type: pages
+            query: page.children.flip
+            max: 2
+            width: 1/2
       left:
         width: 2/3
         sections:
