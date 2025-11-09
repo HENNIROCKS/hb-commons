@@ -6,8 +6,12 @@ image: icon
 
 tabs:
   content:
-    label: Seiten
+    label: Inhalt & Artikel
     columns:
+      top:
+        width: 2/3
+        fields:
+          text: fields/writers/writer-text
       left:
         width: 2/3
         sections:
