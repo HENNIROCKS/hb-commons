@@ -11,7 +11,7 @@
 <nav class="navigation navigation--main">
 
     <label class="navigation__label" for="toggle-nav">
-        <i class="icon icon__menu"></i>
+        <i class="navigation__icon navigation__icon--menu"></i>
         <span class="sr-only">Menü auf- und zuklappen</span>
     </label>
     <input class="navigation__input" id="toggle-nav" type="checkbox" />

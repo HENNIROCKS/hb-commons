@@ -54,15 +54,13 @@ $variant = $block->variant();
 
 <?php elseif ($variant == 'scroll-horizontal'): ?>
 	<div class="gallery gallery--scroll" <?= Html::attr(['data-crop' => $crop, 'data-ratio' => $ratio], null, ' ') ?>>
-		<span class="gallery__icon">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-				<path d="M16 16V12L21 17L16 22V18H4V16H16ZM8 2V5.999L20 6V8H8V12L3 7L8 2Z"></path>
-			</svg>
-		</span>
-		<div class="gallery__container">
-			<?php foreach ($block->images()->toFiles() as $image): ?>
-				<?= $image ?>
-			<?php endforeach ?>
+		<div class="gallery__container--outer">
+			<i class="gallery__icon gallery__icon--arrow-left-right"></i>
+			<div class="gallery__container--inner">
+				<?php foreach ($block->images()->toFiles() as $image): ?>
+					<?= $image ?>
+				<?php endforeach ?>
+			</div>
 		</div>
 		<?php if ($caption->isNotEmpty()): ?>
 			<div class="gallery__caption">

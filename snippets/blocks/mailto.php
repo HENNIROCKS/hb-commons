@@ -27,6 +27,8 @@ $tld     = $block->tld();
             onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"
             title="E-Mail schreiben">
 
+            <i class="mailto__icon mailto__icon--mail"></i>
+
             <?= $text ?>
 
         </a>

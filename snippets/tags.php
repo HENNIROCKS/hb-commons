@@ -16,12 +16,12 @@
 
         <?php if ($disabled == true): ?>
             <span class="tags__link tags__link--disabled">
-                <i class="icon icon__hashtag"></i>
+                <i class="tags__icon tags__icon--hashtag"></i>
                 <?= $tag ?>
             </span>
         <?php else: ?>
             <a class="tags__link" href="<?= $page->parent()->url(['params' => ['tag' => $tag]]) ?>" title="">
-                <i class="icon icon__hashtag"></i>
+                <i class="tags__icon tags__icon--hashtag"></i>
                 <?= $tag ?>
             </a>
         <?php endif ?>
