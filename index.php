@@ -146,7 +146,7 @@ Kirby::plugin('hennirocks/hb-commons', [
     'tags' => [
         'heart' => [
             'html' => function ($tag) {
-                return '<i class="icon icon__heart"></i>';
+                return '<i class="icon icon--heart"></i>';
             }
         ]
     ],

@@ -7,7 +7,7 @@
 
 return function ($page) {
 
-    $limit    = 3;
+    $limit    = 9;
     $articles = collection('blog-articles')->paginate($limit);
 
     return [
