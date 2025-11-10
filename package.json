@@ -1,0 +1,20 @@
+{
+  "name": "hb-commons",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "watch-styles": "sass --watch src/scss/styles.scss assets/css/style.min.css --style compressed",
+    "build-styles": "sass src/scss/styles.scss assets/css/style.min.css --style compressed",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "fslightbox": "^3.7.4",
+    "sass": "^1.93.2",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
