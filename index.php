@@ -12,7 +12,7 @@ use Kirby\Cms\App as Kirby;
 use Hennirocks\Helpers;
 
 Kirby::plugin('hennirocks/hb-commons', [
-    'blueprints' => Helpers::mapFiles(__DIR__, 'blueprints', ['yml', 'yaml']),
+    'blueprints' => Helpers::mapFiles(__DIR__, 'blueprints', ['yml']),
     'collections' => [
         'blog-articles'    => require 'collections/blog-articles.php',
         'links'            => require 'collections/links.php',
