@@ -1,10 +1,10 @@
 {
   "name": "hennirocks/hb-commons",
-  "description": "Everything that my Kirby projects have in common",
+  "description": "My personal main basis for an additional theme",
   "license": "MIT",
   "type": "kirby-plugin",
   "version": "0.1",
-  "homepage": "https://github.com/HENNIROCKS",
+  "homepage": "https://github.com/HENNIROCKS/hb-commons",
   "authors": [
     {
       "name": "Hendrik Berends",
