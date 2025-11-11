@@ -4,6 +4,14 @@ namespace Hennirocks;
 
 class Helpers
 {
+    /**
+     * Liefert alle Dateien mit bestimmten Endungen aus einem Unterverzeichnis relativ zum Basisordner zurück.
+     *
+     * @param string $baseDir Basisordner des Plugins
+     * @param string $subdir Name des Unterordners (z.B. 'templates', 'snippets', 'blueprints')
+     * @param array $exts Array mit Dateiendungen, z.B. ['php']
+     * @return array Assoziatives Array von Schlüssel (Dateipfad ohne Endung relativ zum Unterordner) => kompletter Dateipfad
+     */
     public static function mapFiles(string $baseDir, string $subdir, array $exts): array
     {
         $dir = $baseDir . DIRECTORY_SEPARATOR . $subdir;
