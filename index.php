@@ -13,19 +13,12 @@ use Hennirocks\Helpers;
 
 Kirby::plugin('hennirocks/hb-commons', [
     'blueprints' => Helpers::mapFiles(__DIR__, 'blueprints', ['yml']),
-    'collections' => [
-        'blog-articles'    => require 'collections/blog-articles.php',
-        'links'            => require 'collections/links.php',
-        'pages-footermenu' => require 'collections/pages-footermenu.php',
-        'pages-legal'      => require 'collections/pages-legal.php',
-        'pages-listed'     => require 'collections/pages-listed.php',
-        'pages-published'  => require 'collections/pages-published.php',
-        'portfolio-pages'  => require 'collections/portfolio-pages.php',
-    ],
-    'controllers' => [
-        'blog.json' => require 'controllers/blog.json.php',
-        'blog'      => require 'controllers/blog.php',
-    ],
+    'snippets'   => Helpers::mapFiles(__DIR__, 'snippets',   ['php']),
+    'templates'  => Helpers::mapFiles(__DIR__, 'templates',  ['php']),
+
+    'collections' => Helpers::mapRequires(__DIR__, 'collections', ['php']),
+    'controllers' => Helpers::mapRequires(__DIR__, 'controllers', ['php']),
+
     'hooks' => [
         'kirbytext:after' => function ($text) {
             $search = [
@@ -47,13 +40,11 @@ Kirby::plugin('hennirocks/hb-commons', [
             return str_replace($search, $replace, $text);
         }
     ],
+
     'icons' => [
         // https://getkirby.com/docs/reference/plugins/extensions/icons
     ],
-    'models' => [],
-    'options' => [],
-    'roots' => [],
-    'snippets' => Helpers::mapFiles(__DIR__, 'snippets', ['php']),
+
     'tags' => [
         'heart' => [
             'html' => function ($tag) {
@@ -61,6 +52,4 @@ Kirby::plugin('hennirocks/hb-commons', [
             }
         ]
     ],
-    'templates' => Helpers::mapFiles(__DIR__, 'templates', ['php']),
-    'translations' => [],
 ]);
