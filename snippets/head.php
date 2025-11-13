@@ -5,7 +5,7 @@
  * @var \Kirby\Cms\Site $site
  */
 
-$title       = $site->custom_title()->or($page->custom_title());
+$title       = $site->customtitle()->or($page->customtitle());
 $author      = $site->author()->or('Hendrik Berends');
 $description = $page->description()->or($site->description());
 $keywords    = $page->keywords()->or($site->keywords());

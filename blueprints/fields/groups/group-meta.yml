@@ -3,7 +3,7 @@ label: Meta
 type: group
 
 fields:
-  custom_title: fields/texts/text-custom_title
+  customtitle: fields/texts/text-customtitle
 
   author:
     extends: fields/texts/text-author
